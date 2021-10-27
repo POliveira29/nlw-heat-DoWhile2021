@@ -44,8 +44,13 @@ Este projeto é divido em três partes:
 
 Antes de começar, você vai precisar configurar o seu ambiente de trabalho:
 
-[Notion com passo a passo](https://efficient-sloth-d85.notion.site/Impulse-240cb588fb8d4089917c7a6cef0008b3)
+📝[Notion com passo a passo](https://efficient-sloth-d85.notion.site/Impulse-240cb588fb8d4089917c7a6cef0008b3)
 
+Para a autenticação, que é feita através do GitHub OAuth, é necessário criar um aplicativo OAuth no seu GitHub
+
+[Como criar um aplicativo OAuth no Github](https://docs.github.com/pt/developers/apps/building-oauth-apps/creating-an-oauth-app)
+
+---
 
 #### 🎲 Rodando o Backend (servidor)
 
@@ -63,15 +68,38 @@ $ cd node-heat
 # Instale as dependências
 $ yarn
 
+```
+Criar a aplicação OAuth no GitHub
+
+Para realizar a criação basta acessar: [Link](https://github.com/settings/developers)
+
+Para rodar a autenticação via web e mobile é necessário criar uma aplicação OAuth para cada um
+
+##### Web
+
+##### Mobile
+
+https://auth.expo.io/@you/your-app
+
+Onde no lugar do *@you* você adicionará seu usuário do expo
+E no *your-app* o nome da sua aplicação, que você encontra no app.json na raiz da aplicação
+
+
+[Documentação Autenticação Expo](https://docs.expo.dev/guides/authentication/#github)
+
+
+```
+# Configurar as variáveis ambientes (.env). O arquivo .env deve ser criado dentro da raiz do projeto
+$ GITHUB_CLIENT_ID = 
+$ GITHUB_CLIENT_SECRET =
+$ JWT_SECRET =
+
 # Execute a aplicação em modo de desenvolvimento
 $ yarn dev
 
 # O servidor inciará na porta:4000 - acesse http://localhost:4000 
 
 ```
-<p align="center">
-  <a href="https://github.com/tgmarinho/README-ecoleta/blob/master/Insomnia_API_Ecoletajson.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
-</p>
 
 
 #### 🧭 Rodando a aplicação web (Frontend)
@@ -107,7 +135,7 @@ $ git clone git@github.com:POliveira29/nlw-heat-DoWhile2021.git
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd nlw-heat-DoWhile2021
 
-# Vá para a pasta da aplicação Front End
+# Vá para a pasta da aplicação mobile
 $ cd app
 
 # Instale as dependências
@@ -116,25 +144,27 @@ $ yarn
 # Execute a aplicação em modo de desenvolvimento
 $ expo start
 
-# Uma aba chamada expo será aberta, com as opções de rodar a aplicação via android ou IOS
-
+# Uma aba chamada expo será aberta, com algumas opções para rodar a aplicação
+# Segue abaixo um vídeo explicando como rodar o app no iOS e Android
 ```
+
+📹[Emulando React Native no iOS/Android com Expo](https://www.youtube.com/watch?v=eSjFDWYkdxM)
 
 ## 🛠️ Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-#### **Website**  ([React](https://reactjs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
-
--   **[React Icons](https://react-icons.github.io/react-icons/)**
--   **[Axios](https://github.com/axios/axios)**
-
-#### [](https://github.com/tgmarinho/Ecoleta#server-nodejs--typescript)**Server**  ([NodeJS](https://nodejs.org/en/)  +  [TypeScript](https://www.typescriptlang.org/))
+#### **Server**  ([NodeJS](https://nodejs.org/en/)  + [Prisma](https://www.prisma.io)  +  [TypeScript](https://www.typescriptlang.org/))
 
 -   **[Express](https://expressjs.com/)**
 -   **[CORS](https://expressjs.com/en/resources/middleware/cors.html)**
 -   **[ts-node](https://github.com/TypeStrong/ts-node)**
 -   **[dotENV](https://github.com/motdotla/dotenv)**
+
+#### **Website**  ([React](https://reactjs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
+
+-   **[React Icons](https://react-icons.github.io/react-icons/)**
+-   **[Axios](https://github.com/axios/axios)**
 
 #### [](https://github.com/tgmarinho/Ecoleta#mobile-react-native--typescript)**Mobile**  ([React Native](http://www.reactnative.com/)  +  [TypeScript](https://www.typescriptlang.org/))
 
