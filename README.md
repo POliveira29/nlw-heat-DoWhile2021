@@ -19,15 +19,15 @@ O layout da aplicação está disponível no Figma:
 ### Mobile
 
 <p align="center">
-  <img alt="NLW Heat Mobile" src="" width="200px">
-  <img alt="NLW Heat Mobile" src="" width="200px">
+  <img alt="Mobile Home" src=".github/mobile-home.png" width="300px">
+  <img alt="Mobile Home Conectado" src=".github/mobile-home-logado.png" width="300px">
 </p>
 
 ### Web
 
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="NLW Heat Web" src="" width="400px">
-  <img alt="NLW Heat Web" src="" width="400px">
+<p align="center">
+  <img alt="Web home" src=".github/web-home.png" >
+  <img alt="Web home conectado" src=".github/web-home-logado.png">
 </p>
 
 
