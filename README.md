@@ -100,6 +100,10 @@ $ JWT_SECRET = Gerar código MD5 hash e atribuir aqui
 ```
 Gerando código MD5 Hash
 
+Basta inserir algum texto qualquer e clicar no botão que o código MD5 Hash será gerado
+
+![](.github/createmd5hash.gif)
+
 ```
 # Execute a aplicação em modo de desenvolvimento
 $ yarn dev
@@ -107,7 +111,6 @@ $ yarn dev
 # O servidor inciará na porta:4000 - acesse http://localhost:4000 
 
 ```
-
 
 #### 🧭 Rodando a aplicação web (Frontend)
 
@@ -165,31 +168,40 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 -   **[Express](https://expressjs.com/)**
 -   **[CORS](https://expressjs.com/en/resources/middleware/cors.html)**
--   **[ts-node](https://github.com/TypeStrong/ts-node)**
 -   **[dotENV](https://github.com/motdotla/dotenv)**
+-   **[JSON Web Token](https://www.npmjs.com/package/jsonwebtoken)**
+-   **[Socket.io](https://socket.io/)**
 
 #### **Website**  ([React](https://reactjs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
 
--   **[React Icons](https://react-icons.github.io/react-icons/)**
 -   **[Axios](https://github.com/axios/axios)**
+-   **[React Icons](https://react-icons.github.io/react-icons/)**
+-   **[React Dom](https://yarnpkg.com/package/react-dom)**
+-   **[Sass](https://yarnpkg.com/package/sass)**
+-   **[Socke.io](https://socket.io/)**
 
-#### [](https://github.com/tgmarinho/Ecoleta#mobile-react-native--typescript)**Mobile**  ([React Native](http://www.reactnative.com/)  +  [TypeScript](https://www.typescriptlang.org/))
+#### **Mobile**  ([React Native](http://www.reactnative.com/)  +  [TypeScript](https://www.typescriptlang.org/))
 
+-   **[Axios](https://github.com/axios/axios)**
 -   **[Expo](https://expo.io/)**
 -   **[Expo Google Fonts](https://github.com/expo/google-fonts)**
+-   **[Expo App Loading](https://docs.expo.dev/versions/latest/sdk/app-loading/)**
+-   **[Expo Auth Session](https://docs.expo.dev/versions/latest/sdk/auth-session/)**
+-   **[Expo Linear Gradient](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)**
+-   **[Expo Status Bar](https://docs.expo.dev/versions/latest/sdk/status-bar/)**
+-   **[Expo Auth Session](https://docs.expo.dev/versions/latest/sdk/auth-session/)**
+-   **[Moti](https://moti.fyi/)**
+-   **[React Navigation](https://reactnavigation.org/)**
+-   **[React Iphone X Helper](https://github.com/ptelad/react-native-iphone-x-helper)**
 -   **[React Navigation](https://reactnavigation.org/)**
 -   **[React Native SVG](https://github.com/react-native-community/react-native-svg)**
--   **[Axios](https://github.com/axios/axios)**
+-   **[Socke.io](https://socket.io/)**
 
-#### [](https://github.com/tgmarinho/Ecoleta#utilit%C3%A1rios)**Utilitários**
 
--   Protótipo:  **[NLW Heat - DoWhile 2021](https://www.figma.com/community/file/1031699316177416916)**
--   API:  **[IBGE API](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1)**  →  **[API de UFs](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-UFs-estadosGet)**,  **[API de Municípios](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-Municipios-estadosUFMunicipiosGet)**
+#### **Utilitários**
+
 -   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**  → Extensions:  **[SQLite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)**
--   Commit Conventional:  **[Commitlint](https://github.com/conventional-changelog/commitlint)**
--   Teste de API:  **[Insomnia](https://insomnia.rest/)**
--   Ícones:  **[Feather Icons](https://feathericons.com/)**,  **[Font Awesome](https://fontawesome.com/)**
--   Fontes:  **[Ubuntu](https://fonts.google.com/specimen/Ubuntu)**,  **[Roboto](https://fonts.google.com/specimen/Roboto)**
+-   Teste Back End:  **[Insomnia](https://insomnia.rest/)**
 
 
 ## 📝 Licença
