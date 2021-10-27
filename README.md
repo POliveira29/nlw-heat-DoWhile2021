@@ -46,9 +46,34 @@ Antes de começar, você vai precisar configurar o seu ambiente de trabalho:
 
 📝[Notion com passo a passo](https://efficient-sloth-d85.notion.site/Impulse-240cb588fb8d4089917c7a6cef0008b3)
 
-Para a autenticação, que é feita através do GitHub OAuth, é necessário criar um aplicativo OAuth no seu GitHub
+### Criar a aplicação OAuth no GitHub
 
-[Como criar um aplicativo OAuth no Github](https://docs.github.com/pt/developers/apps/building-oauth-apps/creating-an-oauth-app)
+Para a autenticação, que é feita através do GitHub, é necessário criar um aplicativo OAuth no seu GitHub:
+
+- Para realizar a criação da aplicação basta acessar: [Link](https://github.com/settings/developers)
+
+- Para rodar a autenticação via web e mobile é necessário criar uma aplicação OAuth para cada um, e dependendo de qual você for utilizar é necessário alterar os valores do Client ID e Client secrets no arquivo .env
+
+#### Web
+
+![createApp-web](.github/create-app-forWeb.gif)
+
+1. Onde no campo Homepage URL você irá colocar a rota do servidor, nesse caso é *http://localhost:4000*
+2. E no campo Authorization callback URL a rota da sua aplicação Web, nessa caso *http://localhost:3000*
+
+#### Mobile
+
+![createApp-web](.github/createApp-mobile.gif)
+
+<span>URL Base: https://auth.expo.io/@you/your-app</span>
+
+- Onde no lugar do *@you* você adicionará seu usuário do expo.
+- E no *your-app* o nome da sua aplicação, que você encontra no app.json na raiz da aplicação.
+
+##### Mais informações
+
+- [Como criar um aplicativo OAuth no Github](https://docs.github.com/pt/developers/apps/building-oauth-apps/creating-an-oauth-app)
+- [Documentação Autenticação Expo](https://docs.expo.dev/guides/authentication/#github)
 
 ---
 
@@ -68,32 +93,14 @@ $ cd node-heat
 # Instale as dependências
 $ yarn
 
+# Configurar as variáveis ambientes (.env). O arquivo .env deve ser criado dentro da raiz do projeto com essas variáveis:
+$ GITHUB_CLIENT_ID = O Client ID da sua aplicação
+$ GITHUB_CLIENT_SECRET = O Client secrets da sua aplicação
+$ JWT_SECRET = Gerar código MD5 hash e atribuir aqui
 ```
-Criar a aplicação OAuth no GitHub
-
-Para realizar a criação basta acessar: [Link](https://github.com/settings/developers)
-
-Para rodar a autenticação via web e mobile é necessário criar uma aplicação OAuth para cada um
-
-##### Web
-
-##### Mobile
-
-https://auth.expo.io/@you/your-app
-
-Onde no lugar do *@you* você adicionará seu usuário do expo
-E no *your-app* o nome da sua aplicação, que você encontra no app.json na raiz da aplicação
-
-
-[Documentação Autenticação Expo](https://docs.expo.dev/guides/authentication/#github)
-
+Gerando código MD5 Hash
 
 ```
-# Configurar as variáveis ambientes (.env). O arquivo .env deve ser criado dentro da raiz do projeto
-$ GITHUB_CLIENT_ID = 
-$ GITHUB_CLIENT_SECRET =
-$ JWT_SECRET =
-
 # Execute a aplicação em modo de desenvolvimento
 $ yarn dev
 
